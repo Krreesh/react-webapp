@@ -3,11 +3,7 @@ pipeline {
         RELEASE_NAME = "release.${BUILD_ID}.tar.gz"
     }
 
-    agent {
-        node {
-            label 'agent1'
-        }
-    }
+    agent any //{ node { label 'agent1'} }
 
     options {
         // Only keep the 10 most recent builds
